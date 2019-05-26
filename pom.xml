@@ -8,6 +8,13 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
+	<repositories>
+		<repository>
+			<id>topq</id>
+			<url>http://maven.top-q.co.il/content/groups/public</url>
+		</repository>
+	</repositories>
+
 	<name>nitzan-project-ebay</name>
 	<url>http://maven.apache.org</url>
 
@@ -20,12 +27,16 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.9.9</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
+		</dependency>
+		<dependency>
+			<groupId>il.co.topq.difido</groupId>
+			<artifactId>difido-testng</artifactId>
+			<version>2.2.05</version>
 		</dependency>
 	</dependencies>
 </project>
