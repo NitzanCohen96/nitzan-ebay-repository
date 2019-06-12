@@ -1,58 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="177" started-at="2019-05-26T07:20:36Z" finished-at="2019-05-26T07:20:36Z">
+  <suite name="Default suite" duration-ms="21047" started-at="2019-06-12T22:13:25Z" finished-at="2019-06-12T22:13:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="177" started-at="2019-05-26T07:20:36Z" finished-at="2019-05-26T07:20:36Z">
-      <class name="il.co.jb.ebay.auto.infra.config.MainConfig">
-        <test-method status="FAIL" signature="hi()[pri:0, instance:il.co.jb.ebay.auto.infra.config.MainConfig@548e7350]" name="hi" duration-ms="143" started-at="2019-05-26T10:20:36Z" finished-at="2019-05-26T10:20:36Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-	at il.co.jb.ebay.auto.infra.config.MainConfig.hi(MainConfig.java:18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+    <test name="Default test" duration-ms="21047" started-at="2019-06-12T22:13:25Z" finished-at="2019-06-12T22:13:46Z">
+      <class name="il.co.jb.ebay.auto.tests.LoginTests">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:il.co.jb.ebay.auto.tests.LoginTests@6eebc39e]" name="beforeTest" is-config="true" duration-ms="4086" started-at="2019-06-13T01:13:25Z" finished-at="2019-06-13T01:13:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hi -->
-      </class> <!-- il.co.jb.ebay.auto.infra.config.MainConfig -->
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="test2_InsertOnlyUserName()[pri:0, instance:il.co.jb.ebay.auto.tests.LoginTests@6eebc39e]" name="test2_InsertOnlyUserName" duration-ms="9582" started-at="2019-06-13T01:13:29Z" finished-at="2019-06-13T01:13:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2_InsertOnlyUserName -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:il.co.jb.ebay.auto.tests.LoginTests@6eebc39e]" name="beforeTest" is-config="true" duration-ms="0" started-at="2019-06-13T01:13:39Z" finished-at="2019-06-13T01:13:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="test3_InsertOnlyPassword()[pri:0, instance:il.co.jb.ebay.auto.tests.LoginTests@6eebc39e]" name="test3_InsertOnlyPassword" duration-ms="6215" started-at="2019-06-13T01:13:39Z" finished-at="2019-06-13T01:13:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3_InsertOnlyPassword -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:il.co.jb.ebay.auto.tests.LoginTests@6eebc39e]" name="beforeTest" is-config="true" duration-ms="1" started-at="2019-06-13T01:13:45Z" finished-at="2019-06-13T01:13:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="test4_InsertOnlyUserName()[pri:0, instance:il.co.jb.ebay.auto.tests.LoginTests@6eebc39e]" name="test4_InsertOnlyUserName" duration-ms="1123" started-at="2019-06-13T01:13:45Z" finished-at="2019-06-13T01:13:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4_InsertOnlyUserName -->
+      </class> <!-- il.co.jb.ebay.auto.tests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

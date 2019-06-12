@@ -13,16 +13,20 @@ import il.co.topq.difido.ReportManager;
 public abstract class AbstractTest {
 	
 	protected static ReportDispatcher report = ReportManager.getInstance();
-	
 	protected static WebDriver driver;
 
 	@BeforeMethod
 	public void beforeTest(){
 		
-		if (driver==null) {
+		if (driver == null) {
+			
 			driver = WebDriverFactory.getWebDriver(MainConfig.webDriverType);
 		}
 	}
 
-		
+	
+	//hover:
+	//Actions action = new Actions(webdriver);
+	//WebElement we = webdriver.findElement(By.xpath("html/body/div[13]/ul/li[4]/a"));
+	//action.moveToElement(we).moveToElement(webdriver.findElement(By.xpath("/expression-here"))).click().build().perform();
 }
