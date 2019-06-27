@@ -6,38 +6,47 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import il.co.jb.ebay.auto.infra.pages.EbayHomePage;
+import il.co.jb.ebay.auto.infra.pages.SignInPage;
 
 
 public class LoginTests extends AbstractTest {
+	 
 	
 	@Test
-	public void test_1_BasicLogin() {
+	public void test_1_BasicLogin() throws Exception {
 		
 		//Step 1: Browse to e-bay home page
 		driver.get("https://www.ebay.com");
+		EbayHomePage ebayHomePage = new EbayHomePage(driver);
 		
 		//Step 2: On the top left, click on "sign in" button
-		driver.findElement(By.xpath("//a[text()='Sign in']")).click();
+		SignInPage signInPage = ebayHomePage.clickOnHomeSignInButton();
 		
 		//Step 3: Insert user name and password. Click on "sign in" button
-		driver.findElement(By.id("userid")).sendKeys("aumat15");
-		driver.findElement(By.id("pass")).sendKeys("QaTesting3105");
-		driver.findElement(By.id("sgnBt")).click();
+		String userId = userIdInput();
+		String userPassword = userPasswordInput();
+		
+		signInPage.writeToUserIdField(userId);
+		signInPage.writeToPasswordField(userPassword);
+		ebayHomePage = signInPage.clickOnSignInButton();
 		
 		//Step 4: Verify that user is connected by "sign in" button not visible
-		
+		ebayHomePage
+		Assert.assertEquals(actual, expected);
 		
 	}
-
+/*
 	@Test
-	public void test_2_InsertOnlyUserName() {
+	public void test_2_InsertOnlyUserName() throws Exception {
 		
 		//Step 1: Browse to e-bay home page
 		driver.get("https://www.ebay.com");
+		EbayHomePage ebayHomePage = new EbayHomePage(driver);
 		
 		//Step 2: On the top left, click on "sign in" button
 		//WebElement signInButton = driver.findElement(By.xpath("//a[text()='Sign in']"));
-		EbayHomePage.signInButton.click();
+		
+		ebayHomePage.clickOnHomeSignInButton();
 		
 		
 		//Step 3: Insert only user name, and click on "sign in" button
@@ -129,6 +138,14 @@ public class LoginTests extends AbstractTest {
 		//Step 3: Mark the check box "Stay signed in"
 		
 		
+	}
+	*/
+	private String userIdInput () {
+		return "aumat15";
+	}
+	
+	private String userPasswordInput() {
+		return "QaTesting3105";
 	}
 	
 

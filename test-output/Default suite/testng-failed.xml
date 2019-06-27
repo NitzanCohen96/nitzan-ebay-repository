@@ -6,7 +6,10 @@
       <class name="il.co.jb.ebay.auto.tests.LoginTests">
         <methods>
           <include name="beforeTest"/>
-          <include name="test_6_StaySignedIn"/>
+          <include name="test_3_InsertOnlyPassword"/>
+          <include name="test_2_InsertOnlyUserName"/>
+          <include name="test_4_WrongUserName"/>
+          <include name="afterTest"/>
           <include name="test_5_WrongPassword"/>
         </methods>
       </class> <!-- il.co.jb.ebay.auto.tests.LoginTests -->
