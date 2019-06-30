@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="eBay Sanity">
+
+	<!-- Run all tests in a package -->
+	<test name="Sanity">
+		<packages>
+			<package name="il.co.jb.ebay.auto.tests" />
+		</packages>
+	</test>
+	
+</suite>

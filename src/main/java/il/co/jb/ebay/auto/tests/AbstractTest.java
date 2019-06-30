@@ -1,5 +1,7 @@
 package il.co.jb.ebay.auto.tests;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,24 +15,40 @@ import il.co.topq.difido.ReportManager;
 @Listeners(il.co.topq.difido.ReportManagerHook.class)
 public abstract class AbstractTest {
 	
-	protected static ReportDispatcher report = ReportManager.getInstance();
+	protected ReportDispatcher report = ReportManager.getInstance();
 	protected static WebDriver driver;
 
 	@BeforeMethod
-	public void beforeTest(){
+	public void beforeTest() throws IOException{
+		
+		MainConfig.initFromFile("src\\main\\resources\\config\\MainConfig.properties");
 		
 		if (driver == null) {
-			
 			driver = WebDriverFactory.getWebDriver(MainConfig.webDriverType);
 		}
 	}
 	
-	@AfterMethod
-	public void afterTest() {
-		if (driver != null && MainConfig.closeBrowserAtTestEnd) {
-			driver.close();
-		}
+	public void browseToUrl(String url) {
+		report.log("Browse to url: "+url);
+		driver.get(url);
 	}
+	
+	/*@AfterMethod
+	public void afterTest() {
+		
+		if (driver != null && MainConfig.closeBrowserAtTestEnd) {
+			
+			try {
+				driver.close();
+			}
+			
+			catch (Exception e) {
+				
+			}
+		}
+	}*/
+	
+
 
 	
 	//hover:

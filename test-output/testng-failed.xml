@@ -3,16 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="il.co.jb.ebay.auto.tests.LoginTests">
+      <class name="il.co.jb.ebay.auto.tests.AddToWatchListTest">
         <methods>
           <include name="beforeTest"/>
-          <include name="test_3_InsertOnlyPassword"/>
-          <include name="test_2_InsertOnlyUserName"/>
-          <include name="test_4_WrongUserName"/>
-          <include name="afterTest"/>
-          <include name="test_5_WrongPassword"/>
+          <include name="openBrowserAndLogin"/>
+          <include name="test_addToList"/>
         </methods>
-      </class> <!-- il.co.jb.ebay.auto.tests.LoginTests -->
+      </class> <!-- il.co.jb.ebay.auto.tests.AddToWatchListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

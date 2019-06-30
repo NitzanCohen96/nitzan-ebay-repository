@@ -7,8 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import il.co.jb.ebay.auto.infra.config.MainConfig;
+import il.co.topq.difido.ReportDispatcher;
+import il.co.topq.difido.ReportManager;
 
 public class WebDriverFactory {
+	
+	private static ReportDispatcher report = ReportManager.getInstance();
 	
 	public static WebDriver getWebDriver(WebDriverType webDriverType) {
 		
@@ -27,6 +31,8 @@ public class WebDriverFactory {
 		
 		driver.manage().timeouts().implicitlyWait(MainConfig.webDriverImplicitWaitInSeconds, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		
+		report.log("Opened new "+ webDriverType+" browser window");
 		
 		return driver;
 	}
